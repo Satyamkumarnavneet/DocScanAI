@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulk Document Extraction</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            padding-top: 60px; 
+        }
+        .container {
+            max-width: 1800px;
+            margin: auto;
+            padding-bottom: 50px; 
+        }
+        .file-input {
+            margin-bottom: 20px;
+        }
+        .data-header {
+          font-size: 24px; 
+          padding: 15px 0; 
+          margin-bottom: 20px; 
+        }
+        .table-container {
+            max-width: 100%;
+            overflow-y: auto; 
+            border: 1px solid #ccc; 
+            padding: 20px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">Bulk Document Extraction</a>
+    </nav>
+
+    <div class="container">
+        <div class="file-input">
+            <form action="/" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="files">Select Multiple Files:</label>
+                    <input type="file" class="form-control-file" id="files" name="files" multiple required>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+
+        {% if tables %}
+        <div class="table-container">
+            <h2>Extracted Data</h2>
+            <div class="table-responsive">
+                {{ tables[0]|safe }}
+            </div>
+        </div>
+        {% endif %}
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
