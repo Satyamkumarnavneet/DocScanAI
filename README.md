@@ -12,7 +12,7 @@ DocScanAI is a powerful and efficient document processing application that extra
 ## Installation
 
 1. Clone the repository
-    `git clone <repository-url>
+    `git clone https://github.com/Satyamkumarnavneet/DocScanAI
     cd DocScanAI`
 2. Create and activate a virtual environment (optional but recommended)
      `python -m venv venv`
