@@ -18,7 +18,7 @@ DocScanAI is a powerful and efficient document processing application that extra
      `python -m venv venv`
      `source venv/bin/activate  # On Windows use ``venv\Scripts\activate`
 3. Install dependencies
-     `pip install -r requirements.txt`
+     `pip install Flask pytesseract pdf2image Pillow pandas`
 4. Set up Tesseract OCR
 5. Install Tesseract OCR on your system: Tesseract Installation Guide
 6. Update the pytesseract.pytesseract.tesseract_cmd path in the script to the path of your Tesseract installation.
